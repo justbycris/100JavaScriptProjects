@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        
+        button {
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            background-color: #1465A8;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        button:hover {
+            background-color: #0e548d;
+        }
+        
+       
+    </style>
+</head>
+
+<body>
+    <button id="btn" onclick="changeColor()">Click Me</button>
+    <script>
+        var body = document.querySelector('body');
+        var button = document.getElementById('btn');
+        var colors = ['red', 'blue', 'yellow', 'green', 'purple', 'pink'];
+
+        body.style.backgroundColor = 'violet'
+        button.addEventListener('click', changeColor)
+
+
+        function changeColor() {
+            const colorIndex = parseInt(Math.random() * colors.length)
+            body.style.backgroundColor = colors[colorIndex];
+        }
+    </script>
+</body>
+
+</html>
